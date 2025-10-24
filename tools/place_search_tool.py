@@ -7,6 +7,7 @@ from dotenv import load_dotenv
 class PlaceSearchTool:
     def __init__(self):
         load_dotenv()
+
         self.google_api_key = os.environ.get("GPLACES_API_KEY")
         self.google_places_search = GooglePlaceSearchTool(self.google_api_key)
         self.tavily_search = TavilyPlaceSearchTool()

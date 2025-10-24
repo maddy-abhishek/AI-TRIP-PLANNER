@@ -43,6 +43,17 @@ async def query_travel_agent(query:QueryRequest):
             final_output = output["messages"][-1].content  # Last AI response
         else:
             final_output = str(output)
+
+        # Call save_document with the agent's response.
+        # It will use the default directory "./output" 
+        # and create its own timestamped markdown filename.
+        saved_filename = save_document(final_output)
+        
+        if saved_filename:
+            # This print will now match the one from save_document
+            print(f"Endpoint confirmed: response saved to {saved_filename}")
+        else:
+            print("Endpoint logging: save_document failed.")
         
         return {"answer": final_output}
     except Exception as e:
