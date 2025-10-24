@@ -65,7 +65,7 @@ The agent is equipped with a suite of tools to:
 1. Clone the repository:
 
    ```bash
-   git clone
+   git clone https://github.com/maddy-abhishek/AI-TRIP-PLANNER.git
    ```
 2. Create virtual environment:
 
@@ -118,6 +118,7 @@ Terminal 2: Run the Frontend (Streamlit)
 ```bash
 streamlit run app.py
 ```
+
 
 
 
